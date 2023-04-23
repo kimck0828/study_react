@@ -1,4 +1,4 @@
-import styles from '@/styles/Home.module.css'
+import styles from '@/components/Links.module.css'
 
 export function Links() {
     return (
@@ -9,10 +9,10 @@ export function Links() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <h2>
+                <h2 className={styles.title}>
                     Docs <span>-&gt;</span>
                 </h2>
-                <p>
+                <p className={styles.description}>
                     Find in-depth information about Next.js features and&nbsp;API.
                 </p>
             </a>
