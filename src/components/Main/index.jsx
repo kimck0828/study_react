@@ -1,18 +1,18 @@
 import Image from 'next/image'
-import styles from '@/components/Main.module.css'
-import {Links} from "@/components/Links";
-import {Headline} from "@/components/Headline";
+import styles from './Main.module.css'
+import {Links} from "@/src/components/Links";
+import {Headline} from "@/src/components/Headline";
 
 export function Main(props) {
     return (
         <main className={`${styles.main}`}>
             <Headline page={props.page}
-                      number={1234}
-                      array={[1,2,3]}
-                      obj={{foo:"foo", bar: "bar"}}
-                      bool
-                      comp={<code className={styles.code}>pages/{props.page}.js</code>}
-                      onclick={()=>{alert(props.page)}}
+                   number={1234}
+                   array={[1,2,3]}
+                   obj={{foo:"foo", bar: "bar"}}
+                   bool
+                   comp={<code className={styles.code}>pages/{props.page}.js</code>}
+                   onclick={()=>{alert(props.page)}}
             >
                 {/*<code className={styles.code}>Children pages/{props.page}.js</code>*/}
             </Headline>
