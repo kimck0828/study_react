@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid darkkhaki;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.link:hover {
+    background: rgba(var(--card-rgb), 0.1);
+}
+
+.link:hover span {
+    transform: translateX(4px);
+}
