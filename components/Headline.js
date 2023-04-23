@@ -2,12 +2,12 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 
 export function Headline(props) {
+    console.log("headline props:" , props)
     return (
         <div className={styles.description}> 
             <h1 className={styles.title}>{props.page} Page</h1>
             <p>
-                Get started by editing &nbsp;
-                <code className={styles.code}>pages/{props.page}.js</code>
+                Get started by editing {props.comp}
             </p>
             <div>
                 <a
@@ -25,6 +25,8 @@ export function Headline(props) {
                         priority
                     />
                 </a>
+                <button onClick={props.onclick}>ボタン</button>
+                {props.children}
             </div>
         </div>
     )
