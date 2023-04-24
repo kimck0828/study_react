@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import {Main} from "@/src/components/Main";
 import {Header} from "@/src/components/Header";
+import style from "@/src/styles/Home.module.css";
+import {useState} from "react";
 
 export default function Index() {
+  const [count, setCount] = useState(0);
+  
+  console.log("レンダリング！")
   function handleClick(e) {
-    console.log(e.target)
+    setCount(curr => curr + 1);
     e.preventDefault();
   }
 
@@ -14,9 +19,12 @@ export default function Index() {
         <title>Index Page</title>
       </Head>
       <Header/>
-      <a href={"/about"}
-         onClick={handleClick}>ボタン
-      </a>
+      <div className={style.index_center}>
+        <h1>{count}</h1><br/>
+        <button
+          onClick={handleClick}>ボタン
+        </button>
+      </div>
       <Main page={"index"}/>
     </>
   )
