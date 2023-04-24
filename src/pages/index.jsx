@@ -8,8 +8,8 @@ export default function Index() {
       <Head>
         <title>Index Page</title>
       </Head>
-      <Header />
-      <Main page={"index"} />
+      <Header/>
+      <Main page={"index"}/>
     </>
   )
 }

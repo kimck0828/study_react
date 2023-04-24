@@ -8,8 +8,8 @@ export default function About() {
       <Head>
         <title>About Page</title>
       </Head>
-      <Header />
-      <Main page={"about"} />
+      <Header/>
+      <Main page={"about"}/>
     </>
   )
 }
