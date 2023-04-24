@@ -22,11 +22,9 @@ export function useInputArray() {
       // setArray(arr);
 
       if (!array.some(val => val === text)) {
-        setArray(curr => {
-          return [...curr, text]
-        })
+        setArray(curr => [...curr, text])
+        setText("");
       }
-      setText("");
     }
   }, [text]);
 
