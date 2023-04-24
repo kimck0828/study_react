@@ -26,14 +26,34 @@ export default function Index() {
 
   const handleText = useCallback((e) => {
     console.log(`text:${text}, e.target.value:${e.target.value} `)
-    if (e.target.value.length <= 5) {
+    if (e.target.value.length <= 10) {
       setText(e.target.value);
     }
   }, []);
 
   const handleShowCount = useCallback(() => {
     setShowCount(curr => !curr)
-  }, [])
+  }, []);
+
+  const handleAddText = useCallback((e) => {
+    if (e.keyCode === 13 && text != "") {
+      // 以下のことをやってはいけない！
+      // arrayはイミュータブルなので直接変更してはいけない
+      // ちなみに以下のようにしてもレンダリングは実行されない
+      // const arr = array;
+      // arr.push(text);
+      // setArray(arr);
+
+      if (!array.some(val => val === text)) {
+        setArray(curr => {
+          return [...curr, text]
+        })
+      }
+      setText("");
+    }
+  }, [text]);
+
+
   console.log("レンダリング！")
 
   return (
@@ -54,8 +74,18 @@ export default function Index() {
           </button>
         </div>
         <br/>
-        <input type={"text"} value={text} onChange={handleText}/>
-
+        <div>
+          <input type={"text"} value={text} onChange={handleText} onKeyDown={handleAddText}/>
+        </div>
+        <ul>
+          {
+            array.map((item, idx) => {
+              return (
+                <li key={idx}>{item}</li>
+              )
+            })
+          }
+        </ul>
       </div>
       <Main page={"index"}/>
     </>
