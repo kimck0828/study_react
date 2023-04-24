@@ -14,5 +14,5 @@ export function useCounter() {
     setShowCount(curr => !curr)
   }, []);
 
-  return [count, isShowCount, handleClick, handleShowCount];
+  return {count, isShowCount, handleClick, handleShowCount};
 }

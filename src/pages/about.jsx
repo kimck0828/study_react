@@ -1,16 +1,19 @@
 import Head from 'next/head'
 import {Main} from "@/src/components/Main";
 import {Header} from "@/src/components/Header";
-import {useCounter} from "@/src/hooks/useCounter";
-import {useInputArray} from "@/src/hooks/useInputArray";
-import {useBgColor} from "@/src/hooks/useBgColor";
 import style from "@/src/styles/Home.module.css";
 
-export default function About() {
-  const [count, isShowCount, handleClick, handleShowCount] = useCounter();
-  const [text, array, handleText, handleAddText] = useInputArray();
-  useBgColor();
-  
+export default function About({
+                                count,
+                                isShowCount,
+                                handleClick,
+                                handleShowCount,
+                                text,
+                                array,
+                                handleText,
+                                handleAddText
+                              }) {
+
   return (
     <>
       <Head>

@@ -28,5 +28,5 @@ export function useInputArray() {
     }
   }, [text]);
 
-  return [text, array, handleText, handleAddText];
+  return {text, array, handleText, handleAddText};
 }
