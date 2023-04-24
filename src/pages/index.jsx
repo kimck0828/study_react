@@ -8,6 +8,7 @@ export default function Index() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
   const [isShowCount, setShowCount] = useState(true);
+  const [array, setArray] = useState([]);
 
   useEffect(() => {
     // console.log("useEffect", count)
