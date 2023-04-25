@@ -11,9 +11,11 @@ export default function About({
                                 text,
                                 array,
                                 handleText,
-                                handleAddText
+                                handleAddText,
+                                doubleCount
                               }) {
 
+  console.log("about.jsx レンダリング！")
   return (
     <>
       <Head>
@@ -21,7 +23,7 @@ export default function About({
       </Head>
       <Header/>
       <div className={style.index_center}>
-        <h1>{isShowCount ? count : null}</h1>
+        <h1>{isShowCount ? doubleCount : null}</h1>
         <div>
           <button onClick={handleClick}>
             ボタン

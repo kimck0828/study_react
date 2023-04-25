@@ -13,7 +13,7 @@ export default function Index({
                                 handleText,
                                 handleAddText
                               }) {
-  console.log("レンダリング！")
+  console.log("index.jsx レンダリング！")
 
   return (
     <>

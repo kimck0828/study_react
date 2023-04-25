@@ -28,7 +28,7 @@ const ITEMS = [
 ];
 
 export function Main(props) {
-  const [itemss, setItems] = useState(ITEMS);
+  const [items, setItems] = useState(ITEMS);
   const handleReduce = useCallback(() => {
     setItems((curr) =>{
       console.log("curr", curr)
@@ -36,7 +36,7 @@ export function Main(props) {
     })
   }, [])
 
-  console.log("items", itemss)
+  console.log("items", items)
   return (
     <main className={`${styles.main}`}>
       <Headline page={props.page}
@@ -62,10 +62,7 @@ export function Main(props) {
         />
       </div>
       {/* 真ん中のリンク枠部分 */}
-      {
-        console.log("items>", itemss)
-      }
-      <Links items={itemss}/>
+      <Links items={items}/>
       
       <button onClick={handleReduce}>減らす</button>
 
