@@ -1,6 +1,8 @@
 import styles from './Links.module.css'
 
 export function Links(props) {
+  console.log("items>", props.items)
+
   return (
     <div className={styles.grid}>
       {

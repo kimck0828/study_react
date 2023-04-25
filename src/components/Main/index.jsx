@@ -36,7 +36,6 @@ export function Main(props) {
     })
   }, [])
 
-  console.log("items", items)
   return (
     <main className={`${styles.main}`}>
       <Headline page={props.page}

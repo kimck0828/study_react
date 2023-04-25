@@ -1,12 +1,25 @@
-import {useEffect} from "react";
+import {useCallback, useEffect} from "react";
+import {useRouter} from "next/router";
 
 export const useBgColor = () => {
+  const router = useRouter();
+
+  const bgColor = useCallback( () => {
+    switch (router.pathname) {
+      case "/":
+        return "lightblue"
+      case "/about":
+        return "beige"
+      default:
+        return ""
+    }
+  }, [router.pathname]);
+
   useEffect(() => {
-    // console.log("useEffect", count)
-    document.body.style.backgroundColor = "lightblue";
+    console.log("router.pathname", router.pathname)
+    document.body.style.backgroundColor = bgColor();
     return () => {
-      // console.log("useEffect　アンマウント時", count)
       document.body.style.backgroundColor = "";
     }
-  }, []);
+  }, [bgColor]);
 };
