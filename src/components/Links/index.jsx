@@ -1,9 +1,10 @@
 import styles from './Links.module.css'
 
-export function Links(props) {
+export const Links = (props) => {
   console.log("items>", props.items)
 
   return (
+
     <div className={styles.grid}>
       {
         props.items.map((item, idx) => {

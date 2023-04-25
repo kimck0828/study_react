@@ -1,6 +1,6 @@
 import {useCallback, useState} from "react";
 
-export function useInputArray() {
+export const useInputArray = () => {
   const [text, setText] = useState("");
   const [array, setArray] = useState([]);
 
@@ -21,7 +21,7 @@ export function useInputArray() {
       // arr.push(text);
       // setArray(arr);
 
-      if (!array.some(val => val === text)) {
+      if (!array.includes(text)) {
         setArray(curr => [...curr, text])
         setText("");
       }

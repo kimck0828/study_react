@@ -3,16 +3,16 @@ import {Main} from "@/src/components/Main";
 import {Header} from "@/src/components/Header";
 import style from "@/src/styles/Home.module.css";
 
-export default function Index({
-                                count,
-                                isShowCount,
-                                handleClick,
-                                handleShowCount,
-                                text,
-                                array,
-                                handleText,
-                                handleAddText
-                              }) {
+const Index = ({
+                 count,
+                 isShowCount,
+                 handleClick,
+                 handleShowCount,
+                 text,
+                 array,
+                 handleText,
+                 handleAddText
+               }) => {
   console.log("index.jsx レンダリング！")
 
   return (
@@ -50,3 +50,4 @@ export default function Index({
     </>
   )
 }
+export default Index;

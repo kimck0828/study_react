@@ -27,12 +27,12 @@ const ITEMS = [
   },
 ];
 
-export function Main(props) {
+export const Main = (props) => {
   const [items, setItems] = useState(ITEMS);
   const handleReduce = useCallback(() => {
-    setItems((curr) =>{
+    setItems((curr) => {
       console.log("curr", curr)
-      return curr.splice(0, curr.length-1);
+      return curr.splice(0, curr.length - 1);
     })
   }, [])
 
@@ -62,7 +62,7 @@ export function Main(props) {
       </div>
       {/* 真ん中のリンク枠部分 */}
       <Links items={items}/>
-      
+
       <button onClick={handleReduce}>減らす</button>
 
     </main>

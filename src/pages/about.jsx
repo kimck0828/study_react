@@ -3,8 +3,7 @@ import {Main} from "@/src/components/Main";
 import {Header} from "@/src/components/Header";
 import style from "@/src/styles/Home.module.css";
 
-export default function About({
-                                count,
+const About = ({
                                 isShowCount,
                                 handleClick,
                                 handleShowCount,
@@ -13,7 +12,7 @@ export default function About({
                                 handleText,
                                 handleAddText,
                                 doubleCount
-                              }) {
+                              }) => {
 
   console.log("about.jsx レンダリング！")
   return (
@@ -51,3 +50,6 @@ export default function About({
     </>
   )
 }
+
+
+export default About;
